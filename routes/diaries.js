@@ -43,5 +43,25 @@ router.get('/', ensureAuth, async (req, res) =>{
     }
 })
 
+//  @desc   Show edit page
+//  @router     GET / diaries/edit:id
+router.get('/edit/:id', ensureAuth, async(req, res) =>{
+    const diary = await Diary.findOne({
+        _id: req.params.id
+    }).lean()
+
+    if(!diary) {
+        return res.render('error/404')
+    }
+
+    if(diary.user != req.user.id){
+        res.redirect('/diaries')
+    } else {
+        res.render('diaries/edit', {
+            diary,
+        })
+    }
+})
+
 
 module.exports = router

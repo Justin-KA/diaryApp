@@ -15,7 +15,7 @@
         <tbody>
             {{#each diaries}}
             <tr>
-                <td><a href="/diaries/{{_id}}"></a>{{title}}</td>
+                <td><a href="/diaries/{{_id}}">{{title}}</a></td>
                 <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
                 <td><span class="dash-status">{{status}}</span></td>
                 <td></td>

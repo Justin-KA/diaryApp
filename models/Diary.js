@@ -17,7 +17,9 @@ const DiarySchema = new mongoose.Schema({
     },
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+        ref: 'User',
+        //!Change: this is required as the app will break if user not present
+        required: true 
     },
     createdAt: {
         type: Date,
