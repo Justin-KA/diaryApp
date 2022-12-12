@@ -25,7 +25,7 @@ module.exports = {
           if (floating) {
             return `<a href="/diaries/edit/${storyId}" class="btn-floating halfway-fab blue"><i class="fas fa-edit fa-small"></i></a>`
           } else {
-            return `<a href="/diares/edit/${storyId}"><i class="fas fa-edit"></i></a>`
+            return `<a href="/diaries/edit/${storyId}"><i class="fas fa-edit"></i></a>`
           }
         } else {
           return ''

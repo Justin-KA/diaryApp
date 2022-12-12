@@ -1,6 +1,7 @@
 <h3>Edit Diary</h3>
 <div class="row">
-    <form action="/diaries" method="POST" class="col s12">
+    <form action="/diaries/{{diary._id}}" method="POST" class="col s12">
+        <input type="hidden" name="_method" value="PUT">
         <div class="row">
             <div class="input-field">
                 <input type="text" id="title" name="title" value="{{diary.title}}">
@@ -11,7 +12,7 @@
         <div class="row">
             <div class="input-field">
                 <select id="status" name="status">
-                    {{#select story.status}}
+                    {{#select diary.status}}
                     <option value="public">Public</option>
                     <option value="private" selected>Private</option>
                     {{/select}}
