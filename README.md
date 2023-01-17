@@ -2,7 +2,7 @@
 
 Welcome to my Diary App!
 
-This is a full-stack MERN application that allows users to create and maintain a digital diary. The app is built using JavaScript, Express, MongoDB, and Handlebars. Users can create an account by signing in with google authentication. Users can create public and private diary entries.
+This is a full-stack application that allows users to create and maintain a digital diary. The app is built using JavaScript, Express, MongoDB, and Handlebars. Users can create an account by signing in with google authentication. Users can create public and private diary entries.
 
 Features:
 - User registration and login system using google authentication
